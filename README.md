@@ -1,2 +1,1 @@
-# front-end-uno-game
-Frontend for UNO game.
+# grupo-dupla-dalt-nica-frontend

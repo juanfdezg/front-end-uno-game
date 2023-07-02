@@ -1,0 +1,10 @@
+.playerStack {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 2%);
+}
+
+.playerStack .cards-row.isTurn .card {
+    box-shadow: 10px 10px 17px 3px rgba(0, 0, 0, 0.5);
+  }

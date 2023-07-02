@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;500;600&display=swap');
+
+.about-person {
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    background-color: #fff;
+    border-radius: 7%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+    -2px -2px 5px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    width: 25rem;
+    height: 31rem;
+    font-family: 'Kanit', sans-serif;
+}
+.about-person img {
+    width: 13rem;
+    height: 13rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+
+.about-person h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    text-shadow: none;
+}
+
+.about-person h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(148, 147, 147);
+    text-shadow: none;
+    color: rgb(255, 172, 28);
+}
+
+.about-person p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(96, 96, 96);
+    text-shadow: none;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.social img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: cover;
+    margin: 0.5rem;
+    border-radius: 0%;
+}

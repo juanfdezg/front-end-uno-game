@@ -1,0 +1,30 @@
+.card-container:not(:last-of-type) {
+  margin-bottom: 0.2rem;
+}
+
+.cards-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* .cards-column .card {
+  margin: 3px;
+} */
+
+.cards-column.isTurn {
+border-radius: 5px;
+transition: background-color 0.3s ease-in-out;
+}
+
+.cards-column.isTurn .card {
+cursor: pointer;
+transform: scale(1.2);
+margin-bottom: 1rem;
+transition: transform 0.3s ease;
+}
+
+.cards-column.isTurn .card:hover {
+  transform: translateY(-30%);
+}

@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@400;500&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-container{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+
+}
+
+.login-container h1 {
+    font-size: 2.2rem;
+
+    font-weight: 750;
+    margin-bottom: 15px;
+}
+
+.login-container h2 {
+    font-size: 1.5rem;
+
+    font-weight: 750;
+    margin-bottom: 15px;
+}
+
+
+.login-container::after{
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-color: red;
+    width: 60%;
+    height: 100vh;
+    clip-path: polygon(0 100%, 0 0, 100% 0, 70% 100%);
+    z-index: -1;
+}
+
+.login-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 50px -30px black;
+    width: 1200px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+.login-card a {
+    text-decoration: none;
+    color: red;
+}
+
+#boton-volver-login {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 14px;
+    border: 2px solid red;
+    color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    
+}
+
+
+.column {
+    padding: 4rem;
+  }
+  
+.column:last-child {
+    background-image: url("src/assets/uno-home-content1.jpg");
+    background-size: cover;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    text-align: center;
+}
+  
+.column:last-child:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg, white, #ffffff82);
+    inset: 0;
+}
+
+.column:last-child *{
+    z-index:1;
+}
+
+.column:last-child a { 
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: 2px solid red;
+    color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+
+}
+
+.column:last-child a:hover {
+    background-color: red;
+    color: #fff;
+}
+
+
+.login-container h1 {
+    margin-bottom: 15px;
+}
+
+.form-element {
+    width: 100%;
+    border: none;
+    background-color: #f1f1f1;
+    padding: 20px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: box-shadow 0.2s;
+}
+
+.form-element:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px red;
+}
+
+input[type="checkbox"] {
+    accent-color: red;
+    width: 16px;
+    height: 16px;
+}
+form {
+    margin-top: 3rem;
+  }
+  
+form > * {
+    margin-top: 1rem;
+}
+
+
+
+.button-class input {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: 2px solid red;
+    color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.button-class input:hover {
+    background-color: red;
+    color: #fff;
+    border: 2px solid #fff;
+    transition: 0.2s;
+}
+
+
+
+.form-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-left: 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.social-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 22px;
+    color: white;
+    transition: scale 0.2s;
+
+}
+
+.social-buttons .facebook:hover{
+    scale: 0.85;
+}
+
+.social-buttons .linkedin:hover{
+    scale: 0.85;
+}
+
+.social-buttons .github:hover{
+    scale: 0.85;
+}
+
+
+
+.social-paragraph{
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-buttons img {
+    width: 2.1rem;
+    height: 2.1rem;
+    object-fit: cover;
+    margin: 0.5rem;
+    border-radius: 50%;
+}
+
+/* Responsiva */
+
+@media screen and (max-width: 992px) {
+    .login-card {
+        display: block;
+        width: 500px;
+        text-align: center;
+
+    }
+    .login-card .column:last-child {
+        display: none;
+    }
+    
+    .flex{
+        flex-direction: column;
+        gap: 1rem ;
+    }
+
+    .social-buttons{
+        justify-content: center;
+    }
+
+
+}
+    

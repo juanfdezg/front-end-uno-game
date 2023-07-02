@@ -1,0 +1,33 @@
+.rightStack {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 2rem;
+}
+
+.rightStack .card-container {
+  margin: 0;
+  transform: rotate(-90deg);
+  /* border: black solid 1px; */
+}
+
+.rightStack .card {
+  width: 87px;
+  height: 134px;
+  font-size: 16px;
+  margin-top: -50px;
+  transform: translateY(15%);
+}
+
+.rightStack .cards-column.isTurn .card {
+  box-shadow: 10px 10px 17px 3px rgba(0, 0, 0, 0.5);
+}
+
+.rightStack .mark-NumberCard {
+  font-size: 70px;
+}
+
+.rightStack .mark-ActionCard {
+  font-size: 15px;
+}

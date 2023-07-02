@@ -1,0 +1,76 @@
+.game{
+    margin:4rem 6rem;
+    color: #2a2a2a;
+    font-family: 'Poppins', sans-serif;
+}
+
+.game h1{
+    font-size: 3rem;
+    text-align: center;
+}
+.game p{
+    text-align: center;
+}
+
+.gamecard{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.g-card{
+    width: 32%;
+    text-align: start;
+    box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.11);
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 1rem .8rem;
+}
+
+.game-image{
+    height: 200px;
+    overflow: hidden;
+    border-radius: 7px;
+
+}
+
+.game-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    transition: 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+.game-image:hover img{
+    transform: scale(1.3);
+}
+
+.g-card h4{
+    font-size: 1.3rem;
+    padding: 0.9rem 0 0.2rem 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+    .game{
+        margin: 4rem 2rem;
+    }
+    .gamecard{
+        flex-direction: column;
+    }
+    .g-card{
+        width: 100%;
+        margin: 1rem 0;
+        margin-bottom: 1.5rem;
+    }
+    .game-image{
+        height: 200px;
+    }
+    .game-image img{
+        height: 100%;
+    }
+}
+    
+}

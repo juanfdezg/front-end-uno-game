@@ -1,0 +1,14 @@
+.topStack {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 8%);
+}
+
+.topStack .cards-row.isTurn .card:hover {
+  transform: translateY(30%);
+}
+
+.topStack .cards-row.isTurn .card {
+  box-shadow: 10px 10px 17px 3px rgba(0, 0, 0, 0.5);
+}

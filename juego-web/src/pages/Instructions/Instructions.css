@@ -1,0 +1,122 @@
+.instructions-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  background: rgb(63, 175, 245);
+  background: black;
+}
+
+.instructions-container #instructions-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+.instructions-content {
+  margin-top: -10px;
+  padding: 2rem 6rem;
+  font-family: "Poppins", sans-serif;
+  background: rgb(230, 230, 250);
+  background: linear-gradient(
+    90deg,
+    rgba(230, 230, 250, 1) 0%,
+    rgba(0, 191, 255, 1) 50%,
+    rgba(154, 205, 50, 1) 100%
+  );
+}
+
+.instructions-content h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.instructions-content h2 {
+  font-size: 2rem;
+}
+
+.start-game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4.5rem;
+}
+
+.mid-game {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.end-game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.start-text {
+  width: 45%;
+  text-align: start;
+  font-size: 1.1rem;
+}
+
+.start-text h2 {
+  padding-bottom: 1rem;
+}
+
+.start-uno-card {
+  position: relative;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.mid-text {
+  width: 45%;
+  text-align: start;
+  font-size: 1.1rem;
+}
+
+.mid-text h2 {
+  padding-bottom: 1rem;
+}
+
+.mid-uno-card {
+  position: relative;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.end-text {
+  width: 45%;
+  text-align: start;
+  font-size: 1.1rem;
+}
+
+.end-text h2 {
+  padding-bottom: 1rem;
+}
+
+.end-uno-card {
+  position: relative;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.start-hidden-cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.start-uno-card {
+    display: flex;
+    flex-direction: column;
+}
