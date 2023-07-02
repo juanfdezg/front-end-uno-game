@@ -80,7 +80,8 @@
   }
   
 .column:last-child {
-    background-image: url("src/assets/uno-home-content1.jpg");
+    /* background-image: url("src/assets/uno-home-content1.jpg"); */
+    background-image: url("/uno-home-content1.jpg");
     background-size: cover;
     padding: 4rem;
     display: flex;

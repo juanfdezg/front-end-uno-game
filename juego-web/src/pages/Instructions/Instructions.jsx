@@ -12,7 +12,7 @@ export default function Instructions() {
     <>
       <InstructionsHero
         cName="instructions-hero"
-        instructionsImg="src\assets\minimalist_uno.jpg"
+        instructionsImg="/minimalist_uno.jpg"
         title="¡Aprende a jugar, es muy sencillo!"
         text="Baja para encontrar las reglas de juego"
         buttonText="Ver reglas"

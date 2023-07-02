@@ -7,6 +7,7 @@ import PlayerStack from "../../components/Game/PlayerStack/PlayerStack";
 import DrawStack from "../../components/Game/DrawStack/DrawStack";
 import TableStack from "../../components/Game/TableStack/TableStack";
 import { AuthContext, useAuth } from "../../auth/AuthContext";
+import API_URL from "../../common/config";
 
 export default function Game() {
   const gameId = 1;
@@ -27,7 +28,7 @@ export default function Game() {
   const getPlayersOrder = async (userId) => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_BACKEND_URL}/jugadores/${gameId}`
+        `${API_URL}/jugadores/${gameId}`
       );
       const players = response.data.map((player) => ({
         user_id: player.user_id,
@@ -69,7 +70,7 @@ export default function Game() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `${import.meta.env.VITE_BACKEND_URL}/users/username/${username}`,
+        `${API_URL}/users/username/${username}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -101,7 +102,7 @@ export default function Game() {
   const getTurn = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_BACKEND_URL}/partidas/show/${gameId}`
+        `${API_URL}/partidas/show/${gameId}`
       );
       const turnoActual = response.data.current_player;
       setTurnoActual(turnoActual);
@@ -122,7 +123,7 @@ export default function Game() {
       // Obtener mano de PlayerStack
       const playerHandResponse = await axios.get(
         `${
-          import.meta.env.VITE_BACKEND_URL
+          API_URL
         }/partidas/${gameId}/hand/${currentNumPlayer}`
       );
       const playerHand = playerHandResponse.data.cartasMano;
@@ -141,7 +142,7 @@ export default function Game() {
       // Obtener mano de RightStack
       const rightHandResponse = await axios.get(
         `${
-          import.meta.env.VITE_BACKEND_URL
+          API_URL
         }/partidas/${gameId}/hand/${rightNumPlayer}`
       );
       const rightHand = rightHandResponse.data.cartasMano;
@@ -160,7 +161,7 @@ export default function Game() {
       // Obtener mano de LeftStack
       const leftHandResponse = await axios.get(
         `${
-          import.meta.env.VITE_BACKEND_URL
+          API_URL
         }/partidas/${gameId}/hand/${leftNumPlayer}`
       );
       const leftHand = leftHandResponse.data.cartasMano;
@@ -179,7 +180,7 @@ export default function Game() {
       // Obtener mano de TopStack
       const topHandResponse = await axios.get(
         `${
-          import.meta.env.VITE_BACKEND_URL
+          API_URL
         }/partidas/${gameId}/hand/${topNumPlayer}`
       );
       const topHand = topHandResponse.data.cartasMano;
@@ -219,7 +220,7 @@ export default function Game() {
     try {
       const valores = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
       const response = await axios.get(
-        `${import.meta.env.VITE_BACKEND_URL}/partidas/${gameId}/descarte`
+        `${API_URL}/partidas/${gameId}/descarte`
       );
       const cartasMazoDescarte = response.data.cartasMazoDescarte;
       const topCard = cartasMazoDescarte[0];

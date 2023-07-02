@@ -14,13 +14,13 @@ function Card({ name, title, text, srcImg }) {
           <p>{text}</p>
           <div className="social">
             <a href="https://www.facebook.com">
-              <img src="src/assets/square-facebook.svg" alt="Facebook" />
+              <img src="/square-facebook.svg" alt="Facebook" />
             </a>
             <a href="https://www.linkedin.com">
-              <img src="src/assets/linkedin.svg" alt="Facebook" />
+              <img src="/linkedin.svg" alt="Facebook" />
             </a>
             <a href="https://www.instagram.com">
-              <img src="src/assets/square-twitter.svg" alt="Facebook" />
+              <img src="/square-twitter.svg" alt="Facebook" />
             </a>
           </div>
         </div>

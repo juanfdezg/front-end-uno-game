@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import CardsRow from "../CardsRow/CardsRow";
 import axios from "axios";
 import "./TopStack.css";
+import API_URL from "../../../common/config";
 
 export default function TopStack({ updateTableStack, getTurn, currentTurn, topCards, gameId, topPlayer }) {
   // Función para jugar una carta
   const playCard = (id, gameId, playerId) => {
     axios
       .get(
-        `${import.meta.env.VITE_BACKEND_URL}/partidas/${gameId}/cardInfo/${id}`
+        `${API_URL}/partidas/${gameId}/cardInfo/${id}`
       )
       .then((response) => {
         const cardType = response.data.type;
@@ -34,7 +35,7 @@ export default function TopStack({ updateTableStack, getTurn, currentTurn, topCa
             axios
               .post(
                 `${
-                  import.meta.env.VITE_BACKEND_URL
+                  API_URL
                 }/juego/${gameId}/play/${id}`,
                 {
                   user_id: playerId,
@@ -67,7 +68,7 @@ export default function TopStack({ updateTableStack, getTurn, currentTurn, topCa
         } else {
           axios
             .post(
-              `${import.meta.env.VITE_BACKEND_URL}/juego/${gameId}/play/${id}`,
+              `${API_URL}/juego/${gameId}/play/${id}`,
               {
                 user_id: playerId,
               }

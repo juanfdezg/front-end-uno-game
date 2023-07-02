@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"; // Importa useNavigate
 import "./UserLogin.css";
 import axios from 'axios';
 import { AuthContext } from '../../../auth/AuthContext';
+import API_URL from "../../../common/config";
 
 export default function UserLogin() {
   const { token, setToken } = useContext(AuthContext);
@@ -15,8 +16,7 @@ export default function UserLogin() {
 
     console.log("Apretaste el form");
     // Enviar un post a la ruta login
-    console.log(`${import.meta.env.VITE_BACKEND_URL}`)
-    axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, 
+    axios.post(`${API_URL}/login`, 
     {
       email,
       password 
@@ -82,10 +82,10 @@ export default function UserLogin() {
                   <img src="src/assets/square-facebook.svg" alt="Facebook" />
                 </a>
                 <a href="twitter.com" className="linkedin">
-                  <img src="src/assets/linkedin.svg" alt="Linkedin" />
+                  <img src="/linkedin.svg" alt="Linkedin" />
                 </a>
                 <a href="github.com" className="github">
-                  <img src="src/assets/githublogo.svg" alt="Twitter" />
+                  <img src="/githublogo.svg" alt="Twitter" />
                 </a>
               </div>
             </form>

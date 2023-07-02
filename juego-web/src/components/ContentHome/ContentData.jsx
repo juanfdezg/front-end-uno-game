@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Foto1 from "../../assets/uno-home-content1.jpg";
-import Foto2 from "../../assets/uno-home-content2.jpg";
 import "./ContentData.css";
 
 class ContentData extends Component {

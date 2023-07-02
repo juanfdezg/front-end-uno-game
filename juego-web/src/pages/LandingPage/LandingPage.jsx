@@ -7,7 +7,7 @@ export default function LandingPage() {
     <>
         <Hero
             cName="hero"
-            heroImg="src\assets\uno-background-image.jpg"
+            heroImg="/uno-background-image.jpg"
             title="¡Bienvenido al Juego de UNO!"
             text="¡Juega con tus amigos y familiares!"
             buttonText="¡Ingresar!"

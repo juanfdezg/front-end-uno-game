@@ -1,9 +1,9 @@
 import React from "react";
 
-import Foto1 from "../../assets/uno-home-content1.jpg";
-import Foto2 from "../../assets/uno-home-content2.jpg";
-import Foto3 from "../../assets/uno-home-content3.jpg";
-import Foto4 from "../../assets/uno-home-content4.jpg";
+import Foto1 from "/uno-home-content1.jpg";
+import Foto2 from "/uno-home-content2.jpg";
+import Foto3 from "/uno-home-content3.jpg";
+import Foto4 from "/uno-home-content4.jpg";
 import ContentData from "./ContentData";
 import ContentDataButton from "./ContentDataButton";
 import "./ContentHome.css";

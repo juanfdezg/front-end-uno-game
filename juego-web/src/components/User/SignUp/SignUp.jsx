@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Importa useNavigate
 import { AuthContext } from "../../../auth/AuthContext";
 import "./SignUp.css";
+import API_URL from "../../../common/config";
 
 export default function SignUp() {
   const { token, setToken } = useContext(AuthContext);
@@ -16,10 +17,9 @@ export default function SignUp() {
 
     console.log("Apretaste el form");
     // Enviar un post a la ruta signup
-    console.log(`${import.meta.env.VITE_BACKEND_URL}`);
     // Se envía como objeto el username, email y password
     axios
-      .post(`${import.meta.env.VITE_BACKEND_URL}/signup`, {
+      .post(`${API_URL}/signup`, {
         username,
         email,
         password,

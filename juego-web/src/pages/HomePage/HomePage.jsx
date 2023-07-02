@@ -13,7 +13,7 @@ export default function HomePage() {
 
         <Hero
             cName="hero"
-            heroImg="src\assets\uno-home-hero1.jpeg"
+            heroImg="\uno-home-hero1.jpeg"
             title={`¡Bienvenido, ${username}!`} // Agrega el username al título
             text="Podrás jugar al Uno de manera rápida y sencilla. ¡No te lo pierdas!"
             buttonText="¡Jugar!"
