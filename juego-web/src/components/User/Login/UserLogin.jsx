@@ -79,7 +79,7 @@ export default function UserLogin() {
               <p className="social-paragraph">Otras formas de iniciar sesión</p>
               <div className="social-buttons">
                 <a href="facebook.com" className="facebook">
-                  <img src="src/assets/square-facebook.svg" alt="Facebook" />
+                  <img src="/square-facebook.svg" alt="Facebook" />
                 </a>
                 <a href="twitter.com" className="linkedin">
                   <img src="/linkedin.svg" alt="Linkedin" />
