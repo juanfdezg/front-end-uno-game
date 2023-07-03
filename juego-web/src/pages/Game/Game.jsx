@@ -27,9 +27,7 @@ export default function Game() {
   // Obtener el orden de los jugadores
   const getPlayersOrder = async (userId) => {
     try {
-      const response = await axios.get(
-        `${API_URL}/jugadores/${gameId}`
-      );
+      const response = await axios.get(`${API_URL}/jugadores/${gameId}`);
       const players = response.data.map((player) => ({
         user_id: player.user_id,
         num_player: player.num_player,
@@ -101,9 +99,7 @@ export default function Game() {
   // Buscamos el turno actual
   const getTurn = async () => {
     try {
-      const response = await axios.get(
-        `${API_URL}/partidas/show/${gameId}`
-      );
+      const response = await axios.get(`${API_URL}/partidas/show/${gameId}`);
       const turnoActual = response.data.current_player;
       setTurnoActual(turnoActual);
       // localStorage.setItem("turnoActual", turnoActual);
@@ -122,9 +118,7 @@ export default function Game() {
 
       // Obtener mano de PlayerStack
       const playerHandResponse = await axios.get(
-        `${
-          API_URL
-        }/partidas/${gameId}/hand/${currentNumPlayer}`
+        `${API_URL}/partidas/${gameId}/hand/${currentNumPlayer}`
       );
       const playerHand = playerHandResponse.data.cartasMano;
       const playerCards = playerHand.map((card) => {
@@ -141,9 +135,7 @@ export default function Game() {
 
       // Obtener mano de RightStack
       const rightHandResponse = await axios.get(
-        `${
-          API_URL
-        }/partidas/${gameId}/hand/${rightNumPlayer}`
+        `${API_URL}/partidas/${gameId}/hand/${rightNumPlayer}`
       );
       const rightHand = rightHandResponse.data.cartasMano;
       const rightCards = rightHand.map((card) => {
@@ -160,9 +152,7 @@ export default function Game() {
 
       // Obtener mano de LeftStack
       const leftHandResponse = await axios.get(
-        `${
-          API_URL
-        }/partidas/${gameId}/hand/${leftNumPlayer}`
+        `${API_URL}/partidas/${gameId}/hand/${leftNumPlayer}`
       );
       const leftHand = leftHandResponse.data.cartasMano;
       const leftCards = leftHand.map((card) => {
@@ -179,9 +169,7 @@ export default function Game() {
 
       // Obtener mano de TopStack
       const topHandResponse = await axios.get(
-        `${
-          API_URL
-        }/partidas/${gameId}/hand/${topNumPlayer}`
+        `${API_URL}/partidas/${gameId}/hand/${topNumPlayer}`
       );
       const topHand = topHandResponse.data.cartasMano;
       const topCards = topHand.map((card) => {
@@ -242,13 +230,13 @@ export default function Game() {
   }, [gameId]);
 
   // Escuchar mensajes de otras ventanas
-// window.addEventListener('message', (event) => {
-//   if (event.data.type === 'turnoActual') {
-//     const nuevoNumeroTurno = event.data.value;
-//     // Actualizar el número de turno y gatillar el useEffect correspondiente
-//     setTurnoActual(nuevoNumeroTurno);
-//   }
-// });
+  // window.addEventListener('message', (event) => {
+  //   if (event.data.type === 'turnoActual') {
+  //     const nuevoNumeroTurno = event.data.value;
+  //     // Actualizar el número de turno y gatillar el useEffect correspondiente
+  //     setTurnoActual(nuevoNumeroTurno);
+  //   }
+  // });
 
   return (
     <>
